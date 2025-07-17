@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import requests
 
-def scrap(url):
+def scrape(url):
     """Extracts S&P 500 information from a table and returns multiple lists"""
     page = requests.get(url)
     statusCode = page.status_code

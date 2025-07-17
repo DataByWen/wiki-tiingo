@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 import pandas as pd
-from scrap import scrap # use as a function not a module
+from scrape import scrape # use as a function not a module
 import requests
 from datetime import datetime, timedelta
 
@@ -10,7 +10,7 @@ api_key = os.getenv("API_KEY")
 
 def get_info():
     df = pd.DataFrame() # initializes a new df every time 
-    tickers, names, sectors, subsectors, hqs, dates = scrap("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")
+    tickers, names, sectors, subsectors, hqs, dates = scrape("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")
 
     count = 0
     for ticker, name in zip(tickers, names):
