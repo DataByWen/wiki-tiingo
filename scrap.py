@@ -57,6 +57,7 @@ def main():
     symbols, names, sectors, subsectors, hqs, dates = scrap(link)
     df = create_df(symbols, names, sectors, subsectors, hqs, dates)
     print(df)
+    df.to_csv("sp500_companies.csv", index=False)
 
 if __name__ == "__main__":
     main()
