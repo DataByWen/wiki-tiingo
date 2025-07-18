@@ -51,7 +51,7 @@ def get_info():
             print(f'{ticker} volume is {stock_data["Volume"]}\n')
 
             count+=1
-            if count == 2:  # hourly limit of 50 requests
+            if count == 50:  # hourly limit of 50 requests
                 break
 
         else: 
